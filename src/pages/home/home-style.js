@@ -136,6 +136,7 @@ export const ButtonContainer = styled.div`
  left: ${({scrollBtn}) => scrollBtn? '1480px' : '1600px'};
  position: fixed;
  transition: 0.5s ease-in-out;
+ z-index: 1;
 
  @media(max-width: 1024px) {
     left: ${({scrollBtn}) => scrollBtn? '830px' : '1600px'};
@@ -151,6 +152,11 @@ export const ButtonContainer = styled.div`
     left: ${({scrollBtn}) => scrollBtn? '360px' : '1600px'};
     top: 840px;
  }
+
+ @media(max-width: 360px){
+    left: ${({scrollBtn}) => scrollBtn? '310px' : '1600px'};
+    top: 690px;
+}
 `;
 
 export const ButtonIcon = styled.img`
