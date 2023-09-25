@@ -42,6 +42,10 @@ export const Header = styled.nav`
     width: 80%;
     transition: 0.5s;
 }
+
+@media(max-width: 360px){
+    width: 100%;
+}
 `;
 
 export const List = styled.ul`
@@ -55,6 +59,11 @@ export const List = styled.ul`
 
  @media(max-width: 768px){
     justify-content: space-around;
+}
+
+@media(max-width: 360px){
+    margin-right: 55px;
+    justify-content: space-between;
 }
 `;
 

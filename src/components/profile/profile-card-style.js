@@ -117,4 +117,9 @@ export const ProfileSinopse = styled.p`
  @media(max-width: 414px) {
    width: 380px;
  }
+
+ @media(max-width: 360px){
+    width: 330px;
+    font-size: 20px;
+}
 `;

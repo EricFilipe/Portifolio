@@ -79,6 +79,10 @@ export const ProjectCard = styled.div`
    height: 300px;
    width: 400px;
  }
+
+ @media(max-width: 360px){
+    width: 350px;
+}
 `;
 
 export const ProjectCardReverse = styled.div`
@@ -98,6 +102,10 @@ export const ProjectCardReverse = styled.div`
    height: 350px;
    width: 400px;
  }
+
+ @media(max-width: 360px){
+    width: 350px;
+}
 `;
 
 export const ProjectImage = styled.img`
@@ -129,4 +137,8 @@ export const ProjectImageReverse = styled.img`
 export const ProjectText = styled.p`
  color: #fff;
  font-family: 'Mooli', sans-serif;
+
+ @media(max-width: 360px){
+    font-size: 15px;
+}
 `;

@@ -42,6 +42,10 @@ export const FormContent = styled.div`
 @media(max-width: 414px) {
    height: 55%;
  }
+
+ @media(max-width: 360px){
+    width: 75%;
+}
 `;
 
 export const FormContainer = styled.div`
@@ -68,6 +72,10 @@ export const FormContainer = styled.div`
    width: 90%;
    height: 70%;
  }
+
+ @media(max-width: 360px){
+    width: 100%;
+}
 `;
 
 export const Text = styled.div`
