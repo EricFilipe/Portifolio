@@ -50,13 +50,13 @@ export const FormContent = styled.div`
 
 export const FormContainer = styled.div`
  width: 50%;
- height: 75%;
+ height: 80%;
  display: flex;
  flex-direction: column;
  justify-content: center;
  justify-content: space-between;
  align-items: center;
- padding: 30px 0;
+ padding: 30px 0 0 0;
  box-sizing: border-box;
 
  @media(max-width: 1052px) {
@@ -75,6 +75,7 @@ export const FormContainer = styled.div`
 
  @media(max-width: 360px){
     width: 100%;
+    height: 85%;
 }
 `;
 
@@ -127,3 +128,8 @@ export const Button = styled.button`
  cursor: pointer;
 `;
 
+export const FinalMessage = styled.p`
+ font-size: 18px;
+ color: #fff;
+ font-family: 'Mooli', sans-serif;
+`;

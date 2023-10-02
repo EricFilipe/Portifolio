@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react";
-import { Button, ContactContainer, ContentContainer, FormContainer, FormContent, Input, InputEmpty, MessageContainer, Text } from "./contactCard-style";
+import React, { useContext, useRef, useState } from "react";
+import { Button, ContactContainer, ContentContainer, FinalMessage, FormContainer, FormContent, Input, InputEmpty, MessageContainer, Text } from "./contactCard-style";
+import { UserContext } from "../../context/userContext";
 
 function Contact() {
     
@@ -14,6 +15,10 @@ function Contact() {
     const nameRef = useRef()
     const emailRef = useRef()
     const messageRef = useRef()
+
+    const [thanks, setThanks] = useState('')
+
+    const {handelSubmit} = useContext(UserContext)
 
     const send = () => {
         if(name.trim() !== '') {
@@ -52,7 +57,27 @@ function Contact() {
             }
         }
         else {
-            console.log('ok')
+            handelSubmit(name, email, message);
+            clearInputs();
+            setThanks('Mensagem enviada');
+        }
+    }
+
+    const clearInputs = () => {
+        if(nameRef.current) {
+            nameRef.current.value = '';
+            nameRef.current.focus();
+            setName('');
+        }
+        if(emailRef.current) {
+            emailRef.current.value= '';
+            emailRef.current.focus();
+            setEmail('');
+        }
+        if(messageRef.current) {
+            messageRef.current.value = '';
+            messageRef.current.focus();
+            setMessage('');
         }
     }
 
@@ -107,6 +132,10 @@ function Contact() {
                         </MessageContainer>
 
                         <Button onClick={send}>Enviar</Button>
+                        <FinalMessage>
+
+                        {thanks}
+                        </FinalMessage>
                     </FormContainer>
                 </FormContent>
             </ContactContainer>
