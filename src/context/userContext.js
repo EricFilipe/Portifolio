@@ -7,7 +7,7 @@ export const UserStorage = ({ children }) => {
     const [user, setUser] = useState({});
 
     const handelSubmit = (name, email, message) => {
-        api.post('/', {name, email, message}).then(({data}) => {
+        api.post('/usermessage', {name, email, message}).then(({data}) => {
             setUser(data)
         }).catch((error) => {
             console.log('não foi possivel enviar',error)

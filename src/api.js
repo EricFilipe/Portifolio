@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'https://api-portifolio-qc7hbkrs5-ericfilipe.vercel.app',
+    baseURL: 'https://api-portifolio-1w9arr1mh-ericfilipe.vercel.app/usermessage',
     headers: {
-        "Access-Control-Allow-Origin": "https://api-portifolio-qc7hbkrs5-ericfilipe.vercel.app",
+        "Access-Control-Allow-Origin": "https://api-portifolio-1w9arr1mh-ericfilipe.vercel.app/usermessage",
         "Content-Type": 'application/json'
     }
 })
