@@ -8,11 +8,6 @@ export const ContentContainer = styled.div`
    height: 150vh;
    transition: 0.5s;
  }
-
- @media(max-width: 320px) {
-   height: 200vh;
-   transition: 0.5s;
- }
 `;
 
 export const ContactContainer = styled.div`
