@@ -115,11 +115,11 @@ export const ProfileSinopse = styled.p`
  color: #fff;
 
  @media(max-width: 438px) {
-   width: 380px;
+   width: 360px;
  }
 
  @media(max-width: 390px){
     width: 330px;
-    font-size: 20px;
+    font-size: 19px;
 }
 `;

@@ -43,6 +43,10 @@ export const Header = styled.nav`
     transition: 0.5s;
 }
 
+@media(max-width: 414px){
+    width: 100%;
+ }
+
 @media(max-width: 360px){
     width: 100%;
 }
@@ -164,8 +168,8 @@ export const ButtonContainer = styled.div`
  }
 
  @media(max-width: 360px){
-    left: ${({scrollBtn}) => scrollBtn? '310px' : '1600px'};
-    top: 690px;
+    left: ${({scrollBtn}) => scrollBtn? '300px' : '1600px'};
+    top: 670px;
 }
 `;
 
