@@ -5,7 +5,7 @@ export const ContentContainer = styled.div`
  background-color: #333;
 
  @media(max-width: 598px) {
-   height: 150vh;
+   height: 180vh;
    transition: 0.5s;
  }
 `;
