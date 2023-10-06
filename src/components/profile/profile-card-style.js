@@ -114,11 +114,11 @@ export const ProfileSinopse = styled.p`
  font-size: 23px;
  color: #fff;
 
- @media(max-width: 414px) {
+ @media(max-width: 438px) {
    width: 380px;
  }
 
- @media(max-width: 360px){
+ @media(max-width: 390px){
     width: 330px;
     font-size: 20px;
 }

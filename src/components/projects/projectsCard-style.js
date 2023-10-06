@@ -4,7 +4,7 @@ export const ContentContainer = styled.div`
  height: 100vh;
  background-color: #333;
 
- @media(max-width: 580px) {
+ @media(max-width: 598px) {
    height: 150vh;
    transition: 0.5s;
  }
@@ -72,15 +72,16 @@ export const ProjectCard = styled.div`
    width: 450px;
 }
 
-@media(max-width: 414px) {
+@media(max-width: 598px) {
    box-shadow: none;
    flex-direction: column;
    justify-content: space-between;
-   height: 300px;
+   height: 350px;
    width: 400px;
+   padding: 0 10px;
  }
 
- @media(max-width: 360px){
+ @media(max-width: 428px){
     width: 350px;
 }
 `;
@@ -95,15 +96,20 @@ export const ProjectCardReverse = styled.div`
  flex-direction: row-reverse;
  align-items: center;
 
- @media(max-width: 414px) {
+ @media(max-width: 598px) {
    box-shadow: none;
    flex-direction: column;
    justify-content: space-between;
    height: 350px;
    width: 400px;
+   padding: 0 10px;
  }
 
- @media(max-width: 360px){
+ @media(max-width: 428px){
+    width: 350px;
+}
+
+@media(max-width: 378px){
     width: 350px;
 }
 `;
@@ -116,7 +122,7 @@ export const ProjectImage = styled.img`
  right: 20px;
  top: 40px;
 
- @media(max-width: 414px) {
+ @media(max-width: 598px) {
    right: 0;
  }
 `;
@@ -129,7 +135,7 @@ export const ProjectImageReverse = styled.img`
  left: 20px;
  top: 40px;
 
- @media(max-width: 414px) {
+ @media(max-width: 598px) {
    left: 0;
  }
 `;

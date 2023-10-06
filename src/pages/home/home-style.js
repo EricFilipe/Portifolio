@@ -148,8 +148,18 @@ export const ButtonContainer = styled.div`
     top: 690px;
  }
 
- @media(max-width: 414px) {
-    left: ${({scrollBtn}) => scrollBtn? '360px' : '1600px'};
+ @media(max-width: 498px) {
+    left: ${({scrollBtn}) => scrollBtn? '420px' : '1600px'};
+    top: 840px;
+ }
+
+ @media(max-width: 464px) {
+    left: ${({scrollBtn}) => scrollBtn? '385px' : '1600px'};
+    top: 840px;
+ }
+
+ @media(max-width: 426px) {
+    left: ${({scrollBtn}) => scrollBtn? '345px' : '1600px'};
     top: 840px;
  }
 
