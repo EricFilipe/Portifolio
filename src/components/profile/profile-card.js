@@ -1,6 +1,6 @@
 import { React } from "react";
 import { ContentContainer, Divider, IconItem, IconsContainer, ProfileButton, ProfileCard, ProfileContainer, ProfileContent, ProfileImage, ProfileSinopse, ProfileText } from "./profile-card-style";
-import Picture from '../../assets/f2.jpeg'
+import Picture from '../../assets/myFt.jpeg'
 import JS from '../../assets/js.png'
 import Node from '../../assets/node.png'
 import ReactIcon from '../../assets/react.png'
