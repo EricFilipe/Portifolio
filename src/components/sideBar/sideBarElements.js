@@ -37,11 +37,11 @@ export const SidebarWraper = styled.div`
 export const SidebarMenu = styled.ul`
  display: grid;
  grid-template-columns: 1fr;
- grid-template-rows: repeat(6, 80px);
+ grid-template-rows: repeat(3, 80px);
  text-align: center;
 
  @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
+    grid-template-rows: repeat(3, 90px);
  }
 `;
 
@@ -55,6 +55,7 @@ export const SidebarLink = styled(LinkS)`
  transition: 0.2s ease-in-out;
  text-decoration: none;
  color: #fff;
+ margin-right: 50px;
  cursor: pointer;
 
  &:hover{
