@@ -63,19 +63,9 @@ export const FormContainer = styled.div`
    width: 60%;
 }
 
-@media(max-width: 880px) {
-   width: 70%;
+@media(max-width: 768px) {
+   width: 100%;
    height: 80%;
-}
-
-@media(max-width: 414px) {
-   width: 90%;
-   height: 70%;
- }
-
- @media(max-width: 360px){
-    width: 100%;
-    height: 85%;
 }
 `;
 
@@ -121,7 +111,7 @@ export const Button = styled.button`
  display: flex;
  justify-content: center;
  align-items: center;
- background-color: #3B3382;
+ background-color: #D870DB;
  color: #fff;
  font-size: 16px;
  font-family: 'Mooli', sans-serif;

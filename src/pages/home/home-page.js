@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { Header, HeroContainer, List, Li, Arrow, ButtonContainer, ButtonIcon } from "./home-style";
+import { Header, HeroContainer, List, Li, Arrow, ButtonContainer, ButtonIcon, MobileIcon } from "./home-style";
 import Profile from "../../components/profile/profile-card";
 import Projects from "../../components/projects/projectsCard";
 import Contact from "../../components/contact/contactCard";
 import { animateScroll as scroll } from "react-scroll";
 import ButtonArrow from '../../assets/setas-para-cima.png'
+import SideBar from "../../components/sideBar";
+import {FaBars} from "react-icons/fa";
 
 function Home() {
 
-    const [scrollBtn, setScrollBtn] = useState(false)
+    const [scrollBtn, setScrollBtn] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+        setIsOpen(!isOpen)
+    }
 
     const showBtn = () => {
         if(window.scrollY >= 800) {
@@ -29,6 +36,10 @@ function Home() {
     return (
         <>
         <HeroContainer>
+        <MobileIcon onClick={toggle}>
+            <FaBars />
+        </MobileIcon>
+        <SideBar isOpen={isOpen} toggle={toggle} />
             <Header>
                 <List>
                     <Li 

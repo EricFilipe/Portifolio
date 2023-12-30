@@ -27,7 +27,12 @@ export const HeroContainer = styled.div`
     font-size: 40px;
     text-align: center;
 }
- }
+
+@media(max-width: 768px){
+    margin-top: 300px;
+}
+
+}
 
  @media(max-width: 412px){
     width: 100%;
@@ -39,17 +44,24 @@ export const Header = styled.nav`
  display: flex;
 
  @media(max-width: 768px){
-    width: 80%;
-    transition: 0.5s;
+    display: none;
 }
+`;
 
-@media(max-width: 414px){
-    width: 100%;
+export const MobileIcon = styled.div`
+ display: none;
+
+
+ @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
  }
-
-@media(max-width: 360px){
-    width: 100%;
-}
 `;
 
 export const List = styled.ul`
@@ -144,12 +156,12 @@ export const ButtonContainer = styled.div`
 
  @media(max-width: 1024px) {
     left: ${({scrollBtn}) => scrollBtn? '830px' : '1600px'};
-    top: 690px;
+    top: 590px;
  }
 
  @media(max-width: 760px) {
     left: ${({scrollBtn}) => scrollBtn? '600px' : '1600px'};
-    top: 690px;
+    top: 590px;
  }
 
  @media(max-width: 498px) {
@@ -157,20 +169,10 @@ export const ButtonContainer = styled.div`
     top: 840px;
  }
 
- @media(max-width: 464px) {
-    left: ${({scrollBtn}) => scrollBtn? '385px' : '1600px'};
-    top: 840px;
+ @media(max-width: 468px) {
+    left: ${({scrollBtn}) => scrollBtn? '310px' : '1600px'};
+    top: 690px;
  }
-
- @media(max-width: 426px) {
-    left: ${({scrollBtn}) => scrollBtn? '345px' : '1600px'};
-    top: 840px;
- }
-
- @media(max-width: 360px){
-    left: ${({scrollBtn}) => scrollBtn? '300px' : '1600px'};
-    top: 670px;
-}
 `;
 
 export const ButtonIcon = styled.img`

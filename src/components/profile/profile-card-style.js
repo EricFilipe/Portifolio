@@ -16,6 +16,11 @@ export const ContentContainer = styled.div`
    height: 160vh;
    transition: 0.5s;
  }
+
+ @media(max-width: 768px) {
+   height: 180vh;
+   transition: 0.5s;
+ }
 `;
 
 export const ProfileContainer = styled.div`

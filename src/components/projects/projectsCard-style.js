@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.div`
- height: 100vh;
+ height: 180vh;
  background-color: #333;
 
- @media(max-width: 598px) {
-   height: 180vh;
+ @media(max-width: 768px) {
+   height: 240vh;
    transition: 0.5s;
  }
 `;
@@ -147,4 +147,8 @@ export const ProjectText = styled.p`
  @media(max-width: 360px){
     font-size: 15px;
 }
+`;
+
+export const Link = styled.a`
+ color: #5495EB;
 `;
