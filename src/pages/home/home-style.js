@@ -1,51 +1,20 @@
 import styled from "styled-components";
+import WallPaper from '../../assets/fundoP.png';
 import { Link as LinkScroll } from 'react-scroll';
 
 export const HeroContainer = styled.div`
  height: 100vh;
  display: flex;
  flex-direction: column;
- align-items: center;
  justify-content: space-between;
- background-image: url('https://images.unsplash.com/photo-1635830625698-3b9bd74671ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8&w=1000&q=80');
+ background-image: url(${WallPaper});
  background-size: cover;
- background-attachment: fixed; /*efeito paralax*/
  background-repeat: no-repeat;
- background-position: center; 
- padding-top: 10px;
-
- h1{
- font-family: 'Mooli', sans-serif;
- color: #fff;
- font-size: 60px;
-
- @media(max-width: 1190px){
-    font-size: 50px;
-}
-
-@media(max-width: 996px){
-    font-size: 40px;
-    text-align: center;
-}
-
-@media(max-width: 768px){
-    margin-top: 300px;
-}
-
-}
-
- @media(max-width: 412px){
-    width: 100%;
- }
-`;
-
-export const Header = styled.nav`
- width: 50%;
- display: flex;
+ background-position: center;
 
  @media(max-width: 768px){
-    display: none;
-}
+    align-items: center;
+ }
 `;
 
 export const MobileIcon = styled.div`
@@ -64,117 +33,126 @@ export const MobileIcon = styled.div`
  }
 `;
 
-export const List = styled.ul`
- width: 80%;
+export const HelloBox = styled.div`
  display: flex;
- justify-content: space-between;
+ flex-direction: column;
+ justify-content: center;
+ width: 30%;
+ height: 55%;
+ color: #fff;
+ font-family: "Poppins", sans-serif;
+ margin-left: 80px;
  
- :hover{
-    color: #D870DB;
+ h1{
+   margin: 0;
+   font-size: 65px;
+ }
+
+ h2{
+   margin-top: 0;
+   margin-right: 10px;
+   font-size: 28px;
+ }
+
+ h3{
+   margin-bottom: 0;
+   font-size: 20px;
+ }
+
+ .txt-wrapper span{
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  color: #DB5C37;
+ }
+
+ .txt-wrapper{
+   display: flex;
  }
 
  @media(max-width: 768px){
-    justify-content: space-around;
-}
+    width: 100%;
+    margin-left: 25px;
 
-@media(max-width: 360px){
-    margin-right: 55px;
-    justify-content: space-between;
+    h1{
+      font-size: 50px;
+    }
+
+    h2{
+      font-size: 22px;
+    }
+
+    h3{
+      font-size: 18px;
+    }
+
+    .txt-wrapper span{
+      font-size: 22px;
+    }
 }
 `;
 
-export const Li = styled(LinkScroll)`
- font-family: 'Mooli', sans-serif;
- font-size: 21px;
+export const Media = styled.div`
+ display: flex;
+ width: 150px;
+ font-family: "Poppins", sans-serif;
  color: #fff;
- cursor: pointer;
- list-style: none;
+ font-size: 18px;
+ margin: 0 0 100px 80px;
 
- @media(max-width: 940px){
-    justify-content: space-around;
-    font-size: 17px;
-}
+ @media(max-width: 768px){
+  margin: 0 0 100px 0;
+ }
 `;
 
-export const Arrow = styled.svg`
- width: 60px;
- height: 172px;
- bottom: 20px;
-
- @keyframes Arrow {
-    0% {opacity: 0;}
-    40% {opacity: 1;}
-    80% {opacity: 0;}
-    100% {opacity: 0;}
-}
-
- @-webkit-keyframes Arrow {
-    0% {opacity: 0;}
-    40% {opacity: 1;}
-    80% {opacity: 0;}
-    100% {opacity: 0;}
-}
-
-path{
-    stroke: #fff;
-    stroke-width: 1px;
-    fill: transparent;
-    animation: Arrow 2s infinite;
-    -webkit-animation: Arrow 2s infinite;
-}
-
-.a1{
-    animation-delay: -1s;
-    -webkit-animation-delay: -1s;
-}
-
-.a2{
-    animation-delay: -0.5s;
-    -webkit-animation-delay: -0.5s;
-}
-
-.a3{
-    animation-delay: 0s;
-    -webkit-animation-delay: 0s;
-}
-`;
-
-export const ButtonContainer = styled.div`
- height: 40px;
- width: 40px;
- border-radius: 50%;
- background-color: #D870DB;
+export const MediaIcons = styled.div`
+ width: 100%;
  cursor: pointer;
  display: flex;
- justify-content: center;
+ justify-content: space-around;
  align-items: center;
- top: 700px;
- left: ${({scrollBtn}) => scrollBtn? '1480px' : '1600px'};
- position: fixed;
- transition: 0.5s ease-in-out;
- z-index: 1;
+ 
+ a{
+   color: #bfbfbf;
 
- @media(max-width: 1024px) {
-    left: ${({scrollBtn}) => scrollBtn? '830px' : '1600px'};
-    top: 590px;
- }
-
- @media(max-width: 760px) {
-    left: ${({scrollBtn}) => scrollBtn? '600px' : '1600px'};
-    top: 590px;
- }
-
- @media(max-width: 498px) {
-    left: ${({scrollBtn}) => scrollBtn? '420px' : '1600px'};
-    top: 840px;
- }
-
- @media(max-width: 468px) {
-    left: ${({scrollBtn}) => scrollBtn? '310px' : '1600px'};
-    top: 690px;
+    &:hover{
+      color: #DB5C37;
+    }
  }
 `;
 
-export const ButtonIcon = styled.img`
- width: 25px;
+export const Buttons = styled(LinkScroll)`
+ display: flex;
+ align-items: center;
+ width: 70%;
 `;
+
+export const ToContact = styled(LinkScroll)`
+  width: 110px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  background-color: #DB5C37;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out ;
+
+  &:hover{
+  transform: scale(1.1);
+}
+`;
+
+export const ToPortifolio = styled(LinkScroll)`
+  font-size: 14px;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+  margin-left: 30px;
+`;
+
+
+

@@ -2,104 +2,67 @@ import styled from "styled-components";
 
 export const ContentContainer = styled.div`
  height: 100vh;
- background-color: #333;
- background-image: url('https://images3.alphacoders.com/131/1318505.jpeg');
+ width: 100vw;
+ background-color: #131417;
  background-size: cover;
- background-attachment: fixed;
- background-repeat: no-repeat;
- background-position: center;
  display: flex;
  justify-content: center;
  align-items: center;
 
- @media(max-width: 1062px) {
-   height: 160vh;
-   transition: 0.5s;
- }
-
- @media(max-width: 768px) {
-   height: 180vh;
-   transition: 0.5s;
+ @media (max-width: 768px) {
+  height: 130vh;
  }
 `;
 
 export const ProfileContainer = styled.div`
  height: 100%;
- width: 70%;
+ width: 85%;
  display: flex;
+ flex-direction: column;
  justify-content: center;
  align-items: center;
- 
- justify-content: space-around;
- 
 
- @media(max-width: 1400px) {
-   width: 90%;
-   justify-content: space-evenly;
+
+ @media(max-width: 768px) {
+  
+  width: 90%;
 }
+`;
 
- @media(max-width: 1062px) {
-   flex-direction: column;
- }
+export const Title = styled.h1`
+ color: #fff;
+ font-size: 32px;
+ font-family: "Poppins", sans-serif;
+ margin: 0 ;
+`;
+
+export const ProfileContentContainer = styled.div`
+ display: flex;
+
+ @media(max-width: 768px) {
+  display: flex;
+  flex-direction: column;
+}
 `;
 
 export const ProfileContent = styled.div`
- width: 40%;
+ width: 30%;
+ height: 100%;
  display: flex;
  justify-content: center;
-`;
 
-export const ProfileCard = styled.div`
- width: 100%;
- background-color: #fff;
- display: flex;
- flex-direction: column;
- align-items: center;
- padding: 30px;
- border-radius: 8px;
-
- span{
-   margin-top: 15px;
-   font-family: 'Mooli', sans-serif;
-   font-size: 21px;
- }
-
- @media(max-width: 464px) {
-   width: 150%;
- }
+ @media(max-width: 768px) {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
 `;
 
 export const ProfileImage = styled.img`
- height: auto;
- width: 150px;
- border-radius: 50%;
- border: 4px solid #D870DB;
-`;
-
-export const ProfileText = styled.div`
- font-family: 'Mooli', sans-serif;
- font-size: 17px;
- text-align: center;
- width: 80%;
- margin-top: 10px;
-`; 
-
-export const ProfileButton = styled.button`
- width: 150px;
- height: 50px;
- border-radius: 15px;
- border: none;
- background-color: #D870DB;
- color: #fff;
- font-family: 'Mooli', sans-serif;
- margin-top: 35px;
- cursor: pointer;
-`;
-
-export const Divider = styled.div`
- width: 100%;
- border-top: .5px solid #bfbfbf;
- margin: 20px 0;
+ height: 100%;
+ width: 70%;
+ border-radius: 8px;
 `;
 
 export const IconsContainer = styled.div`
@@ -113,18 +76,125 @@ export const IconItem = styled.img`
  height: auto;
 `;
 
-export const ProfileSinopse = styled.p`
- width: 430px;
- font-family: 'Mooli', sans-serif;
- font-size: 23px;
- color: #fff;
+export const ProfileInfo = styled.div`
+ display: flex;
+ flex-direction: column;
+ width: 70%;
+ padding: 0 0 0 40px;
 
- @media(max-width: 438px) {
-   width: 360px;
+ @media(max-width: 768px) {
+  width: 100%;
+  padding: 0;
+}
+`;
+
+export const Devider = styled.div`
+ border-bottom: 1px solid #5D5D5D;
+ width: 45%;
+ margin: 30px 0 40px 0;
+
+ @media(max-width: 768px) {
+  width: 65%;
+}
+`;
+
+export const SinopseTitle = styled.div`
+ display: flex;
+
+ h1{
+  color: #fff;
+  margin: 0 10px 0 0;
+  font-size: 30px;
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
  }
 
- @media(max-width: 390px){
-    width: 330px;
-    font-size: 19px;
+ span{ 
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  color: #DB5C37;
+ }
+
+ @media(max-width: 768px) {
+  h1{
+    font-size: 15px;
+  }
+   
+  span{
+    font-size: 15px;
+  }
 }
+`;
+
+export const ProfileSinopse = styled.p`
+ font-family: 'Poppins', sans-serif;
+ font-size: 18px;
+ color: #bfbfbf;
+
+ @media(max-width: 768px) {
+  font-size: 14px;
+}
+`;
+
+export const CvButton = styled.button`
+  width: 150px;
+  height: 40px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  background-color: #DB5C37;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover{
+  transform: scale(1.1);
+  }
+`;
+
+export const Languages = styled.div`
+ width: 150px;
+ display: flex;
+ flex-direction: column;
+ font-family: 'Poppins', sans-serif;
+ font-size: 15px;
+ color: #fff;
+ margin-top: 15px;
+`;
+
+export const Flags = styled.div`
+ display: flex;
+ width: 100%;
+
+ img{
+  width: 60px;
+  height: 60px;
+ }
+
+`;
+
+export const LangLevel = styled.div`
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ height: 60px;
+ margin-left: 10px;
+
+ .lang{
+  color: #bfbfbf;
+  font-size: 16px;
+ }
+
+ .level{
+  font-size: 12px;
+  color: #5D5D5D;
+ }
 `;

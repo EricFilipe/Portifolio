@@ -1,85 +1,99 @@
-import React, { useEffect, useState } from "react";
-import { Header, HeroContainer, List, Li, Arrow, ButtonContainer, ButtonIcon, MobileIcon } from "./home-style";
+import React, { useEffect, useRef, useState } from "react";
+import {HeroContainer, MobileIcon, HelloBox, Buttons, Media, MediaIcons, Span, ToPortifolio, ToContact } from "./home-style";
 import Profile from "../../components/profile/profile-card";
 import Projects from "../../components/projects/projectsCard";
 import Contact from "../../components/contact/contactCard";
-import { animateScroll as scroll } from "react-scroll";
-import ButtonArrow from '../../assets/setas-para-cima.png'
+import HeaderComponent from "../../components/header/Header";
 import SideBar from "../../components/sideBar";
 import {FaBars} from "react-icons/fa";
+import { IoMdMailUnread } from "react-icons/io";
+import Typed from "typed.js";
+import { SlSocialInstagram } from "react-icons/sl";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { SlSocialGithub } from "react-icons/sl";
+import { useNavigate } from "react-router-dom";
+import Skills from "../../components/skills/skills";
+import { Link } from "../../components/projects/projectsCard-style";
+import Footer from "../../components/footer/footer";
 
 function Home() {
 
-    const [scrollBtn, setScrollBtn] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const el = useRef(null);
+    const navigate = useNavigate();
 
     const toggle = () => {
         setIsOpen(!isOpen)
     }
 
-    const showBtn = () => {
-        if(window.scrollY >= 800) {
-            setScrollBtn(true)
-        } else {
-            setScrollBtn(false)
-        }
-    }
-
     useEffect(() => {
-        window.addEventListener('scroll', showBtn)
-    }, [])
+        const typed = new Typed(el.current, {
+            strings: ['Desenvolvedor web', 'Freelancer', 'Programador', ],
+            typeSpeed: 50,
+            loop: true,
+            loopCount: Infinity,
+            backSpeed: 50
+        })
 
-    const toggleHome = () => {
-        scroll.scrollToTop()
-    }
+        return() => {
+            typed.destroy();
+        }
+    }, [])
 
     return (
         <>
+        <HeaderComponent />
         <HeroContainer>
-        <MobileIcon onClick={toggle}>
-            <FaBars />
-        </MobileIcon>
-        <SideBar isOpen={isOpen} toggle={toggle} />
-            <Header>
-                <List>
-                    <Li 
-                    to='tecnologias'
+            <MobileIcon onClick={toggle}>
+                <FaBars />
+            </MobileIcon>
+            <SideBar isOpen={isOpen} toggle={toggle} />
+            <HelloBox>
+                <h3>Olá, meu nome é</h3>
+                <h1>Éric Filipe</h1>
+                <div className="txt-wrapper">
+                    <h2>e eu sou</h2> 
+                    <span  ref={el}/>
+                </div>
+                <Buttons>
+                    <ToContact
+                    to='contato'
                     smooth={true}
                     duration={500}
-                    exact='true'
-                    >Tecnologias</Li>
-                    
-                    <Li 
+                    exact='true'><IoMdMailUnread />Contratar</ToContact>
+
+                    <ToPortifolio 
                     to='projetos'
                     smooth={true}
                     duration={500}
                     exact='true'
-                    >Projetos</Li>
-                    
-                    <Li 
-                    to='contato'
-                    smooth={true}
-                    duration={500}
-                    exact='true'
-                    >Contato</Li>
-                </List>
-            </Header>
-            <h1>Procurando um desenvolvedor fullstack?</h1>
-            <Arrow>
-                <path className="a1" d="M0 0 L30 32 L60 0"></path>
-                <path className="a2" d="M0 20 L30 52 L60 20"></path>
-                <path className="a3" d="M0 40 L30 72 L60 40"></path>
-            </Arrow>
+                    >Ver Portifolio</ToPortifolio>
+                </Buttons>
+            </HelloBox>
 
+            <Media>
+                <span>Mídia: </span>
+                <MediaIcons>
+                    <Link href="https://www.instagram.com/eric_fiilipe/?next=%2F" target="blank">
+                        <SlSocialInstagram />
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/éric-barros-305621290/" target="_blank" >
+                        <SlSocialLinkedin />
+                    </Link>
+                    <Link href="https://github.com/EricFilipe" target="_blank">
+                        <SlSocialGithub />
+                    </Link>
+                </MediaIcons>
+            </Media>
         </HeroContainer>
 
-        <ButtonContainer scrollBtn={scrollBtn} onClick={toggleHome}>
-            <ButtonIcon alt="" src={ButtonArrow} />
-        </ButtonContainer>
+
         
         <Profile />
+        <Skills />
         <Projects />
         <Contact />
+        <Footer />
         </>
     )
 }
