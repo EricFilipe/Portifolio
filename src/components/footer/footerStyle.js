@@ -15,6 +15,10 @@ export const FooterInfo = styled.div`
  height: 180px;
  display: grid;
  grid-template-columns: repeat(3, 1fr);
+
+ @media (max-width: 768px) {
+   grid-template-columns: repeat(2, 1fr);
+ }
 `;
 
 export const FooterMedia = styled.div`
@@ -24,6 +28,10 @@ export const FooterMedia = styled.div`
  align-items: center;
  padding: 0 70px 0 70px;
  box-sizing: border-box;
+
+ @media (max-width: 768px) {
+   padding: 0 30px 0 20px;
+ }
 `;
 
 export const FirstColumn = styled.div`
@@ -38,6 +46,8 @@ export const FirstColumn = styled.div`
     font-size: 14px;
     margin: 0;
  }
+
+
 `;
 
 export const SecColumn = styled.div`
@@ -72,6 +82,10 @@ export const ThirdColumn = styled.div`
     font-family: "Poppins", sans-serif;
     margin: 0 0 8px 0;
  }
+
+ @media (max-width: 768px) {
+   display: none;
+ }
 `;
 
 export const Logo = styled.div`
@@ -91,6 +105,12 @@ export const Text = styled.div`
     font-weight: bold;
     font-size: 16px;
     color: #fff;
+ }
+
+ @media (max-width: 768px) {
+   p{
+      font-size: 14px;
+   }
  }
 `;
 

@@ -5,7 +5,7 @@ export const ContentContainer = styled.div`
  background-color: #131417;
 
  @media(max-width: 768px) {
-   height: 420vh;
+   height: 500vh;
    transition: 0.5s;
  }
 `;
@@ -93,6 +93,12 @@ export const ProjectTitle = styled.div`
   color: #fff;
   font-family: "Poppins", sans-serif;
  }
+
+ @media (max-width: 768px) {
+  h2{
+    font-size: 14px;
+  }
+ }
 `;
 
 export const UsedTecnologies = styled.div`
@@ -119,7 +125,7 @@ export const ProjectBtns = styled.div`
  justify-content: space-around;
 
  @media (max-width: 768px) {
-  width: 70%;
+  width: 75%;
  }
 `;
 

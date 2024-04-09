@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ContentContainer = styled.div`
  height: 100vh;
- width: 100vw;
  background-color: #131417;
  background-size: cover;
  display: flex;
@@ -61,7 +60,7 @@ export const ProfileContent = styled.div`
 
 export const ProfileImage = styled.img`
  height: 100%;
- width: 70%;
+ width: 85%;
  border-radius: 8px;
 `;
 
@@ -118,11 +117,11 @@ export const SinopseTitle = styled.div`
 
  @media(max-width: 768px) {
   h1{
-    font-size: 15px;
+    font-size: 14px;
   }
    
   span{
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 `;

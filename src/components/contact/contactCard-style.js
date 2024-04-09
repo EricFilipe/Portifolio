@@ -7,9 +7,8 @@ export const ContentContainer = styled.div`
  align-items: center;
  background-color: #131417;
 
- @media(max-width: 580px) {
-   height: 150vh;
-   transition: 0.5s;
+ @media(max-width: 768px) {
+   height: 170vh;
  }
 `;
 
@@ -21,6 +20,8 @@ export const ContactContainer = styled.div`
 
  @media (max-width: 768px) {
   flex-direction: column;
+  flex-direction: column-reverse;
+  gap: 60px;
  }
 `;
 
@@ -43,13 +44,9 @@ export const FormContainer = styled.form`
  padding: 0 0 0 50px;
  box-sizing: border-box;
 
- @media(max-width: 1052px) {
-   width: 60%;
-}
-
 @media(max-width: 768px) {
    width: 100%;
-   height: 80%;
+   padding: 0 0 0 15px;
 }
 `;
 
@@ -68,6 +65,10 @@ export const Input = styled.input`
  box-sizing: border-box;
  background-color: rgba(255, 255, 255, 0.07);
  color: #fff;
+
+ @media (max-width: 768px) {
+  width: 95%;
+ }
 `;
 
 export const MsgArea = styled.textarea`
@@ -84,6 +85,11 @@ export const MsgArea = styled.textarea`
  box-sizing: border-box;
  background-color: rgba(255, 255, 255, 0.07);
  color: #fff;
+
+ @media (max-width: 768px) {
+  width: 95%;
+  max-width: 95%;
+ }
 `;
 
 export const MessageContainer = styled.div`
@@ -111,12 +117,19 @@ export const Button = styled.button`
  font-weight: bold;
  cursor: pointer;
  margin-top: 20px;
+
+ @media (max-width: 768px) {
+  align-self: center;
+ }
 `;
 
 export const ContactContent = styled.div`
  width: 45%;
  height: 85%;
  
+ @media (max-width: 768px) {
+  width: 100%;
+ }
 `;
 
 export const ContactContentContainer = styled.div`
@@ -131,6 +144,12 @@ export const SocialMediaContacts = styled.div`
  grid-template-columns: repeat(2, 1fr);
  column-gap: 15px;
  row-gap: 20px;
+
+ @media (max-width: 768px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
 `;
 
 export const Contacts = styled.div`
@@ -147,6 +166,10 @@ export const Contacts = styled.div`
    width: 40px;
    height: 40px;
    cursor: pointer;
+ }
+
+ @media (max-width: 768px) {
+  width: 90%;
  }
 `;
 
@@ -172,10 +195,18 @@ export const EmailContact = styled.div`
    color: #bfbfbf;
    font-family: "Poppins", sans-serif;
  }
+
+ @media (max-width: 768px) {
+  width: 90%;
+ }
 `;
 
 export const Map = styled.div`
  width: 95%;
  height: 240px;
  margin-top: 20px;
+
+ @media (max-width: 768px) {
+  margin-left: 10px;
+ }
 `;
