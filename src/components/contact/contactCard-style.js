@@ -8,7 +8,7 @@ export const ContentContainer = styled.div`
  background-color: #131417;
 
  @media(max-width: 768px) {
-   height: 170vh;
+   height: 200vh;
  }
 `;
 

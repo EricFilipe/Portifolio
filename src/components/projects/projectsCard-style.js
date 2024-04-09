@@ -145,6 +145,7 @@ export const FirstBtn = styled.button`
 
  @media (max-width: 768px) {
   width: 110px;
+  font-size: 14px;
  }
 `;
 
@@ -166,6 +167,5 @@ export const SecondBtn = styled.button`
 `;
 
 export const Link = styled.a`
- color: #5495EB;
  text-decoration: none;
 `;
