@@ -7,6 +7,7 @@ import { SlSocialLinkedin } from "react-icons/sl";
 import { MdEmail } from "react-icons/md";
 import { Link } from "../projects/projectsCard-style";
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import emailjs from "@emailjs/browser"
 
 function Contact() {
     
@@ -25,7 +26,24 @@ function Contact() {
     const phoneNumberRef = useRef()
     const messageRef = useRef()
 
-    const {handelSubmit} = useContext(UserContext)
+    // const {handelSubmit} = useContext(UserContext)
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    
+
+    emailjs.sendForm('service_rla45xm', 'template_e2gwx6i', form.current, {
+        publicKey: 'c6m6Y2WpGgFGnOlV6',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
     const send = () => {
         if(name.trim() !== '') {
@@ -64,7 +82,17 @@ function Contact() {
             }
         }
         else {
-            handelSubmit(name, email, message);
+            const templateParams = {
+                from_name: name,
+                message: message,
+                email: email
+            }
+            emailjs.send("service_rla45xm","template_e2gwx6i", templateParams, 'c6m6Y2WpGgFGnOlV6',
+              ).then((response) => {
+                console.log("email enviado", response.status, response.text)
+            }, (err) => {
+                console.log("errr", err)
+            })
             clearInputs();
         }
     }
@@ -136,10 +164,11 @@ function Contact() {
                 </ContactContent>
 
                 <FormContent>
-                    <FormContainer>
+                    <FormContainer onSubmit={send}>
                         <Label>Nome</Label>
                         <Input 
                         type="text" 
+                        name="text"
                         placeholder="Ex: Jose" 
                         value={name} 
                         onChange={(e) => setName(e.target.value)}
@@ -151,6 +180,7 @@ function Contact() {
                         <Label>E-mail</Label>
                         <Input 
                         type="email" 
+                        name="email"
                         placeholder="Ex: jose@email.com" 
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)}
@@ -162,6 +192,7 @@ function Contact() {
                         <Label>Whatsapp com DDD</Label>
                         <Input 
                         type="text" 
+                        name="email"
                         placeholder="(00) 0 0000-0000" 
                         value={email} 
                         onChange={(e) => setEmail(e.target.value)}
@@ -173,6 +204,7 @@ function Contact() {
                         <Label>Mensagem</Label>
                         <MsgArea
                         type="text" 
+                        name="text"
                         placeholder="Escreva sua messagem aqui..." 
                         value={message} 
                         onChange={(e) => setMessage(e.target.value)} 
@@ -181,7 +213,7 @@ function Contact() {
                         required
                         />                      
 
-                        <Button onClick={send}>ENVIAR</Button>
+                        <Button type="submit" onClick={() => send()}>ENVIAR</Button>
                     </FormContainer>
                 </FormContent>
             </ContactContainer>
