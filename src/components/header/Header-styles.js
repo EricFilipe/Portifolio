@@ -35,7 +35,7 @@ export const LogoN = styled.img`
 }
 `;
 
-export const HeaderButton = styled.button`
+export const HeaderButton = styled(LinkScroll)`
  width: 200px;
  height: 35px;
  background: transparent;

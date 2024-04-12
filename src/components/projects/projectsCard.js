@@ -13,6 +13,7 @@ import HTML from "../../assets/HTML5.png";
 import CSS from "../../assets/CSS3.png";
 import TS from "../../assets/ts.png";
 import MySQL from "../../assets/mysql.png";
+import ChatApp from "../../assets/Captura de tela chat-app.png";
 
 function Projects() {
 
@@ -35,11 +36,14 @@ function Projects() {
                                 </UsedTecnologies>
                             </ProjectTitle>
                             <ProjectDescription>
-                                sdgfsdfsdf hpasdhfpasuhdpf hsdpafhpsdhfpsahdfpashdpfhpsad pfshdp fhspdfh pshfd
+                                O meu primeiro projeto em react, um site que simula
+                                o anúncio e a venda de ingresso para um filme.
                             </ProjectDescription>
                             <ProjectBtns>
                                 <FirstBtn>Ver Projeto</FirstBtn>
-                                <SecondBtn> Repositório </SecondBtn>
+                                <Link href="https://github.com/EricFilipe/Batman_Project" target="blank">
+                                    <SecondBtn> Repositório </SecondBtn>
+                                </Link>
                             </ProjectBtns>
                         </ProjectText>
                     </PositionContainer>
@@ -60,13 +64,17 @@ function Projects() {
                                 </UsedTecnologies>
                             </ProjectTitle>
                             <ProjectDescription>
-                                Clone do YouTube com desenvolvimento do front e do back-end com suas devidas integrações, 
-                                consumindo também a API pública do YouTube podendo pesquisar vídeos e trazendo suas informações
-                                como nome do canal, views, data de lançamento... 
+                                Um projeto fullstack, ele se baseia na interface do YouTube
+                                trazendo o desenvolvimento do frontend com React e TypeScript e do backend
+                                com Node e MySQL para o banco de dados, com funcionalidades como cadastro e login de usuário 
+                                com token de autenticaçâo JWT, cadastro de vídeo e também integrção com 
+                                a API pública do YouTube.
                             </ProjectDescription>
                             <ProjectBtns>
                                 <FirstBtn>Ver Projeto</FirstBtn>
-                                <SecondBtn> Repositório </SecondBtn>
+                                <Link href="https://github.com/EricFilipe/YouTube-Project" target="blank">
+                                    <SecondBtn> Repositório </SecondBtn>
+                                </Link>
                             </ProjectBtns>
                         </ProjectText>
                     </PositionContainer>
@@ -85,12 +93,16 @@ function Projects() {
                                 </UsedTecnologies>
                             </ProjectTitle>
                             <ProjectDescription>
-                                Projeto que consome uma API pública de filmes, onde o client faz a pesquisa 
+                                Projeto que consome uma API pública de filmes, onde o cliente faz a pesquisa 
                                 de um filme e ele retorna diversas informações como poster, título, classificação, ano de lançamento...
                             </ProjectDescription>
                             <ProjectBtns>
-                                <FirstBtn>Ver Projeto</FirstBtn>
-                                <SecondBtn> Repositório </SecondBtn>
+                                <Link href="https://movie-app-eight-kappa.vercel.app" target="blank">
+                                    <FirstBtn>Ver Projeto</FirstBtn>
+                                </Link>
+                                <Link href="https://github.com/EricFilipe/Movie-app" target="blank">
+                                    <SecondBtn> Repositório </SecondBtn>
+                                </Link>
                             </ProjectBtns>
                         </ProjectText>
                     </PositionContainer>
@@ -109,13 +121,17 @@ function Projects() {
                                 </UsedTecnologies>
                             </ProjectTitle>
                             <ProjectDescription>
+                                O Guia visual de Star Wars é um projeto desenvolvido com HTML, CSS e JavaScript puro
+                                que integra a uma API onde pode-se encontrar os dados sobre a franquia. 
                                 Um site que traz todas as informações sobre o universo de Star Wars, personagens, planetas, naves, etc.
                             </ProjectDescription>
                             <ProjectBtns>
                                 <Link href="https://starwars-guide-byericf.netlify.app" target="blank">
                                     <FirstBtn>Ver Projeto</FirstBtn>
                                 </Link>
-                                <SecondBtn> Repositório </SecondBtn>
+                                <Link href="https://github.com/EricFilipe/StarWars-Guide" target="blank"> 
+                                    <SecondBtn> Repositório </SecondBtn>
+                                </Link>
                             </ProjectBtns>
                         </ProjectText>
                     </PositionContainer>
@@ -134,13 +150,43 @@ function Projects() {
                                 </UsedTecnologies>
                             </ProjectTitle>
                             <ProjectDescription>
-                                dslfhsdhfh sfdshfhsfheohfwoeifhohefoh pow ehpowpeohpweofh pohpewoh ohiewfh h poewfh pewofhp 
+                                Uma landing page desenvolvida com React e StyledComponents, 
+                                com um design atrativo e totalmente responsiva.  
                             </ProjectDescription>
                             <ProjectBtns>
                                 <Link href="https://landing-page-byericf.netlify.app" target="blank">
                                     <FirstBtn>Ver Projeto</FirstBtn>
                                 </Link>
-                                <SecondBtn> Repositório </SecondBtn>
+                                <Link href="https://github.com/EricFilipe/LandingPage" target="blank">
+                                    <SecondBtn> Repositório </SecondBtn>
+                                </Link>
+                            </ProjectBtns>
+                        </ProjectText>
+                    </PositionContainer>
+
+                    <PositionContainer>
+                        <ProjectCard>
+                            <ProjectImage alt="project image" src={ChatApp} />
+                        </ProjectCard>
+                        <ProjectText>
+                            <ProjectTitle>
+                                <h2>Chat App</h2>
+                                <UsedTecnologies>
+                                    <img className="used-tecnologies" src={RCT} alt=""/>
+                                    <img className="used-tecnologies" src={SC} alt=""/>
+                                    <img className="used-tecnologies" src={JS} alt=""/>
+                                </UsedTecnologies>
+                            </ProjectTitle>
+                            <ProjectDescription>
+                                Chat em tempo real utilizando Socke.io
+                            </ProjectDescription>
+                            <ProjectBtns>
+                                <Link href="https://chatleague.vercel.app" target="blank">
+                                    <FirstBtn>Ver Projeto</FirstBtn>
+                                </Link>
+                                <Link href="https://github.com/EricFilipe/Chat-frontend" target="blank">
+                                    <SecondBtn> Repositório </SecondBtn>
+                                </Link>
                             </ProjectBtns>
                         </ProjectText>
                     </PositionContainer>

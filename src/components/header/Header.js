@@ -42,7 +42,12 @@ function HeaderComponent() {
             >PROJETOS</Li>
         </List>
 
-        <HeaderButton><IoMdSend /> ENTRAR EM CONTATO</HeaderButton>
+        <HeaderButton
+         to='contato'
+         smooth={true}
+         duration={500}
+         exact='true'
+        ><IoMdSend /> ENTRAR EM CONTATO</HeaderButton>
     </Header>
   )
 }

@@ -56,7 +56,7 @@ export const TecnologiesImg = styled.div`
  width: 80px;
  height: 80px;
  border-radius: 8px;
- background-color: #1f1e1c;
+ background-color: #383838;
  display: flex;
  justify-content: center;
  align-items: center;

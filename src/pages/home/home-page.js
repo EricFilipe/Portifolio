@@ -20,7 +20,6 @@ function Home() {
 
     const [isOpen, setIsOpen] = useState(false);
     const el = useRef(null);
-    const navigate = useNavigate();
 
     const toggle = () => {
         setIsOpen(!isOpen)

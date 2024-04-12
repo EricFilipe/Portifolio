@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const ContentContainer = styled.div`
- height: 280vh;
+ height: 340vh;
  background-color: #131417;
 
  @media(max-width: 768px) {
-   height: 500vh;
-   transition: 0.5s;
+   height: 550vh;
  }
 `;
 
