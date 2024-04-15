@@ -61,7 +61,8 @@ export const ProjectImage = styled.img`
  border-radius: 8px 0 0 8px;
 
  @media(max-width: 768px) {
-  height: 250px;
+  
+  height: 225px;
   border-radius: 8px 8px 0 0; 
  }
 `;

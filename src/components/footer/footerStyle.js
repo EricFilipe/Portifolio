@@ -46,6 +46,13 @@ export const FirstColumn = styled.div`
     font-size: 14px;
     margin: 0;
  }
+
+ @media (max-width: 768px) {
+   margin-left: 10px;
+  p{
+   font-size: 12px;
+  }
+ }
 `;
 
 export const SecColumn = styled.div`
@@ -93,6 +100,12 @@ export const Logo = styled.div`
  img{
     width: 100px;
  }
+
+ @media (max-width: 768px) {
+  img{
+   width: 80px;
+  }
+ }
 `;
 
 export const Text = styled.div`
@@ -107,7 +120,7 @@ export const Text = styled.div`
 
  @media (max-width: 768px) {
    p{
-      font-size: 12px;
+      font-size: 10px;
    }
  }
 `;

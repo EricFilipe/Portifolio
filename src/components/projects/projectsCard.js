@@ -40,7 +40,9 @@ function Projects() {
                                 o anúncio e a venda de ingresso para um filme.
                             </ProjectDescription>
                             <ProjectBtns>
-                                <FirstBtn>Ver Projeto</FirstBtn>
+                                <Link href="https://batman-project-pearl.vercel.app" target="blank">
+                                    <FirstBtn>Ver Projeto</FirstBtn>
+                                </Link>
                                 <Link href="https://github.com/EricFilipe/Batman_Project" target="blank">
                                     <SecondBtn> Repositório </SecondBtn>
                                 </Link>
@@ -178,7 +180,8 @@ function Projects() {
                                 </UsedTecnologies>
                             </ProjectTitle>
                             <ProjectDescription>
-                                Chat em tempo real utilizando Socke.io
+                                Chat em tempo real utilizando comunicaçâo full duplex com Socket.io, que
+                                fornece uma comunicação bidirecional entre o transmissor e o receptor.
                             </ProjectDescription>
                             <ProjectBtns>
                                 <Link href="https://chatleague.vercel.app" target="blank">
