@@ -1,10 +1,6 @@
 import { React, useEffect, useRef } from "react";
-import { ContentContainer, CvButton, Devider, Divider, Flags, IconItem, IconsContainer, Idiomas, LangLevel, Languages, ProfileButton, ProfileCard, ProfileContainer, ProfileContent, ProfileContentContainer, ProfileImage, ProfileInfo, ProfileSinopse, ProfileText, SinopseTitle, Title } from "./profile-card-style";
+import { ContentContainer, CvButton, Devider, Flags, LangLevel, Languages, ProfileContainer, ProfileContent, ProfileContentContainer, ProfileImage, ProfileInfo, ProfileSinopse, ProfileText, SinopseTitle, Title } from "./profile-card-style";
 import Picture from '../../assets/myFt.jpeg'
-import JS from '../../assets/js.png'
-import Node from '../../assets/node.png'
-import ReactIcon from '../../assets/react.png'
-import { Link } from "react-router-dom";
 import Typed from "typed.js";
 import { FaWpforms } from "react-icons/fa";
 import PTflag from "../../assets/brasil.png";
@@ -46,8 +42,10 @@ function Profile() {
                             Venho sempre buscando aprender sobre novas tecnologias e me atualizar no mercado de trabalho. Foco no desenvolvimento web com as tecnologias HTML, CSS, JavaScript, TypeScript, React, Node.
 
                         </ProfileSinopse>
-                        <CvButton><FaWpforms /> Download CV</CvButton>
-
+                        
+                            <CvButton><FaWpforms /> Download CV</CvButton>
+                        
+                        
                         <Languages>
                             <h3>Idiomas</h3>
                             <Flags>

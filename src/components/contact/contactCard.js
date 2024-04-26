@@ -25,25 +25,8 @@ function Contact() {
     const emailRef = useRef()
     const phoneNumberRef = useRef()
     const messageRef = useRef()
-
-    // const {handelSubmit} = useContext(UserContext)
     const form = useRef();
 
-  const sendEmail = (e) => {
-    
-
-    emailjs.sendForm('service_rla45xm', 'template_e2gwx6i', form.current, {
-        publicKey: 'c6m6Y2WpGgFGnOlV6',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
 
     const send = () => {
         if(name.trim() !== '') {
@@ -52,12 +35,16 @@ function Contact() {
         if(email.trim() !== '') {
             setEmalValid(true)
         }
+        if(phoneNumber.trim() !== '') {
+            setPhoneNumberValid(true)
+        }
         if(message.trim() !== '') {
             setMessageValid(true)
         }
-        if(name.trim() === '' && email.trim() === '' && message.trim() === '') {
+        if(name.trim() === '' && email.trim() === '' && phoneNumber.trim() === '' && message.trim() === '') {
             setNameValid(false)
             setEmalValid(false)
+            setPhoneNumberValid(false)
             setMessageValid(false)
             if(nameRef.current) {
                 nameRef.current.focus()
@@ -75,6 +62,12 @@ function Contact() {
                 emailRef.current.focus()
             }
         }
+        else if(phoneNumber.trim() === '') {
+            setPhoneNumberValid(false)
+            if(phoneNumberRef.current) {
+                phoneNumberRef.current.focus()
+            }
+        }
         else if(message.trim() === '') {
             setMessageValid(false)
             if(messageRef.current) {
@@ -85,7 +78,8 @@ function Contact() {
             const templateParams = {
                 from_name: name,
                 message: message,
-                email: email
+                email: email,
+                phoneNumber: phoneNumber,
             }
             emailjs.send("service_rla45xm","template_e2gwx6i", templateParams, 'c6m6Y2WpGgFGnOlV6',
               ).then((response) => {
@@ -192,12 +186,12 @@ function Contact() {
                         <Label>Whatsapp com DDD</Label>
                         <Input 
                         type="text" 
-                        name="email"
+                        name="phoneNumber"
                         placeholder="(00) 0 0000-0000" 
-                        value={email} 
-                        onChange={(e) => setEmail(e.target.value)}
-                        ref={emailRef}
-                        valid={emailValid}
+                        value={phoneNumber} 
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        ref={phoneNumberRef}
+                        valid={phoneNumberValid}
                         required
                         />                       
 

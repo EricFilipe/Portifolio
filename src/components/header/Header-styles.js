@@ -65,13 +65,8 @@ export const List = styled.ul`
  display: flex;
  justify-content: space-between;
 
- @media(max-width: 768px){
-    justify-content: space-around;
-}
-
-@media(max-width: 360px){
-    margin-right: 55px;
-    justify-content: space-between;
+@media(max-width: 1130px){
+    width: 40%;
 }
 
 @media(max-width: 768px){
@@ -91,12 +86,6 @@ export const Li = styled(LinkScroll)`
 
  &:hover{
     color: #fff;
-    border-bottom: 1px solid #DB5C37;
     transition: 0.5s ease-in-out;
  }
-
- @media(max-width: 940px){
-    justify-content: space-around;
-    font-size: 17px;
-}
 `;

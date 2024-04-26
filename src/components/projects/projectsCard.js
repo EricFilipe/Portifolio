@@ -13,7 +13,7 @@ import HTML from "../../assets/HTML5.png";
 import CSS from "../../assets/CSS3.png";
 import TS from "../../assets/ts.png";
 import MySQL from "../../assets/mysql.png";
-import ChatApp from "../../assets/Captura de tela chat-app.png";
+import ChatApp from "../../assets/Captura de tela chat.png";
 
 function Projects() {
 
