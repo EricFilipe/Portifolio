@@ -5,6 +5,7 @@ import Typed from "typed.js";
 import { FaWpforms } from "react-icons/fa";
 import PTflag from "../../assets/brasil.png";
 import ENflag from "../../assets/estados-unidos.png";
+import Curriculo from "../../assets/files/curriculo2.pdf"
 
 function Profile() {
     const el = useRef(null);
@@ -42,10 +43,9 @@ function Profile() {
                             Venho sempre buscando aprender sobre novas tecnologias e me atualizar no mercado de trabalho. Foco no desenvolvimento web com as tecnologias HTML, CSS, JavaScript, TypeScript, React, Node.
 
                         </ProfileSinopse>
-                        
+                        <a href={Curriculo} download="meuCurriculo" target="blank" style={{width: '150px', textDecoration: 'none'}}>
                             <CvButton><FaWpforms /> Download CV</CvButton>
-                        
-                        
+                        </a>
                         <Languages>
                             <h3>Idiomas</h3>
                             <Flags>

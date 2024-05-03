@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import {HeroContainer, MobileIcon, HelloBox, Buttons, Media, MediaIcons, Span, ToPortifolio, ToContact } from "./home-style";
+import {HeroContainer, MobileIcon, HelloBox, Buttons, Media, MediaIcons, ToPortifolio, ToContact } from "./home-style";
 import Profile from "../../components/profile/profile-card";
 import Projects from "../../components/projects/projectsCard";
 import Contact from "../../components/contact/contactCard";
@@ -11,7 +11,6 @@ import Typed from "typed.js";
 import { SlSocialInstagram } from "react-icons/sl";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { SlSocialGithub } from "react-icons/sl";
-import { useNavigate } from "react-router-dom";
 import Skills from "../../components/skills/skills";
 import { Link } from "../../components/projects/projectsCard-style";
 import Footer from "../../components/footer/footer";

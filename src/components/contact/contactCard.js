@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
-import { Button, ContactContainer, ContactContent, ContactContentContainer, Contacts, ContentContainer, EmailContact, FinalMessage, FormContainer, FormContent, Input, InputEmpty, Label, Map, MediaContactContent, MessageContainer, MsgArea, SocialMediaContacts, Text } from "./contactCard-style";
-import { UserContext } from "../../context/userContext";
+import React, { useRef, useState } from "react";
+import { Button, ContactContainer, ContactContent, ContactContentContainer, Contacts, ContentContainer, EmailContact, FormContainer, FormContent, Input, Label, Map, MsgArea, MsgSent, SocialMediaContacts } from "./contactCard-style";
 import { Devider, Title } from "../profile/profile-card-style";
 import { SlSocialInstagram } from "react-icons/sl";
 import { SlSocialLinkedin } from "react-icons/sl";
@@ -11,21 +10,21 @@ import emailjs from "@emailjs/browser"
 
 function Contact() {
     
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [phoneNumber, setPhoneNumber] = useState('')
-    const [message, setMessage] = useState('')
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [message, setMessage] = useState('');
     
-    const [nameValid, setNameValid] = useState(true)
-    const [emailValid, setEmalValid] = useState(true)
-    const [phoneNumberValid, setPhoneNumberValid] = useState(true)
-    const [messageValid, setMessageValid] = useState(true)
+    const [nameValid, setNameValid] = useState(true);
+    const [emailValid, setEmalValid] = useState(true);
+    const [phoneNumberValid, setPhoneNumberValid] = useState(true);
+    const [messageValid, setMessageValid] = useState(true);
+    const [msgSent, setMsgSent] = useState('')
 
-    const nameRef = useRef()
-    const emailRef = useRef()
-    const phoneNumberRef = useRef()
-    const messageRef = useRef()
-    const form = useRef();
+    const nameRef = useRef();
+    const emailRef = useRef();
+    const phoneNumberRef = useRef();
+    const messageRef = useRef();
 
 
     const send = () => {
@@ -88,6 +87,7 @@ function Contact() {
                 console.log("errr", err)
             })
             clearInputs();
+            setMsgSent('Mensagem enviada!');
         }
     }
 
@@ -101,6 +101,11 @@ function Contact() {
             emailRef.current.value= '';
             emailRef.current.focus();
             setEmail('');
+        }
+        if(phoneNumberRef.current) {
+            phoneNumberRef.current.value= '';
+            phoneNumberRef.current.focus();
+            setPhoneNumber('');
         }
         if(messageRef.current) {
             messageRef.current.value = '';
@@ -208,6 +213,7 @@ function Contact() {
                         />                      
 
                         <Button type="submit" onClick={() => send()}>ENVIAR</Button>
+                        <MsgSent>{msgSent}</MsgSent>
                     </FormContainer>
                 </FormContent>
             </ContactContainer>

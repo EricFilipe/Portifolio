@@ -210,3 +210,11 @@ export const Map = styled.div`
   margin-left: 10px;
  }
 `;
+
+export const MsgSent = styled.span`
+ color: #fff;
+ font-family: "Poppins", sans-serif;
+ font-weight: bold;
+ font-size: 14px;
+ 
+`;

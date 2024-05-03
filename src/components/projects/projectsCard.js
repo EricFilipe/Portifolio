@@ -1,5 +1,5 @@
 import React from "react";
-import { ContentContainer, FirstBtn, Link, PositionContainer, PositionContainerLeft, PositionContainerRight, ProjectBtns, ProjectCard, ProjectCardReverse, ProjectContainer, ProjectContent, ProjectDescription, ProjectImage, ProjectImageReverse, ProjectText, ProjectTitle, SecondBtn, UsedTecnologies } from "./projectsCard-style";
+import { ContentContainer, FirstBtn, Link, PositionContainer, ProjectBtns, ProjectCard, ProjectContainer, ProjectContent, ProjectDescription, ProjectImage, ProjectText, ProjectTitle, SecondBtn, UsedTecnologies } from "./projectsCard-style";
 import siteProject from '../../assets/Captura de Tela (4).png';
 import ytProject from '../../assets/Captura de Tela YT.png';
 import mvProject from '../../assets/Captura de Tela MA.png';
@@ -73,7 +73,9 @@ function Projects() {
                                 a API pública do YouTube.
                             </ProjectDescription>
                             <ProjectBtns>
-                                <FirstBtn>Ver Projeto</FirstBtn>
+                                <Link href="https://you-tube-project-phi.vercel.app" target="blank">
+                                    <FirstBtn>Ver Projeto</FirstBtn>
+                                </Link>
                                 <Link href="https://github.com/EricFilipe/YouTube-Project" target="blank">
                                     <SecondBtn> Repositório </SecondBtn>
                                 </Link>
