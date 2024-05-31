@@ -1,6 +1,6 @@
 import React from 'react'
 import { Devider, ProfileContentContainer, ProfileSinopse, SinopseTitle, Title } from '../profile/profile-card-style';
-import { ContentContainer, ProfileContainer, SkillsTxt, TecnologiesImg, TecnologiesImgContainer } from './skillsElements';
+import { ContentContainer, ProfileContainer, SkillsContainer, SkillsTxt, TecnologiesImg, TecnologiesImgContainer } from './skillsElements';
 import JS from "../../assets/js.png";
 import NODE from "../../assets/node.png";
 import RCT from "../../assets/react.png";
@@ -14,7 +14,7 @@ import MySQL from "../../assets/mysql.png";
 const Skills = () => {
   return (
     <ContentContainer id='tecnologias'>
-        <ProfileContainer>
+        <SkillsContainer>
             <Title>TECNOLOGIAS</Title>
             <Devider />
             <ProfileContentContainer>
@@ -59,7 +59,7 @@ const Skills = () => {
                     </TecnologiesImg>
                 </TecnologiesImgContainer>
             </ProfileContentContainer>
-        </ProfileContainer>
+        </SkillsContainer>
     </ContentContainer>
   )
 }

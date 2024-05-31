@@ -11,7 +11,7 @@ export const ContentContainer = styled.div`
 
 export const ProjectContainer = styled.div`
  width: 100%;
- height: 100%;
+ height: 80%;
  display: flex;
  flex-direction: column;
  justify-content: center;

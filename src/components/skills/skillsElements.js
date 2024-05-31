@@ -9,7 +9,7 @@ export const ContentContainer = styled.div`
  align-items: center;
 `;
 
-export const ProfileContainer = styled.div`
+export const SkillsContainer = styled.div`
  height: 100%;
  width: 85%;
  display: flex;
