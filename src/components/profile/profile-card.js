@@ -59,7 +59,7 @@ function Profile() {
                                 <img src={ENflag} alt="bnadeira" />
                                 <LangLevel>
                                     <span className="lang">Inglês</span>
-                                    <span className="level">AVANÇADO</span>
+                                    <span className="level">FLUENTE</span>
                                 </LangLevel>
                             </Flags>
                         </Languages>
