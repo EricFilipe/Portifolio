@@ -114,16 +114,6 @@ function Contact() {
         }
     }
 
-    const { isLoaded } = useJsApiLoader({
-        id: 'google-map-script',
-        googleMapsApiKey: "AIzaSyDGqNN2rr_JSfE8JQDrMDcCLbn47Zp168c"
-    });
-
-    const position = {
-        lat: -8.468621, 
-        lng: -35.731106
-    }
-
     return (
         <ContentContainer id='contato'>
             <Title>CONTATO</Title>
@@ -147,17 +137,6 @@ function Contact() {
                                 <MdEmail className="media-img"/><span> ericfilipe125@gmail.com</span>
                             </EmailContact>
                         </SocialMediaContacts>
-                        <Map>
-                            { isLoaded ? (
-                            <GoogleMap
-                                mapContainerStyle={{width: '100%', height: '100%', borderRadius: '5px'}}
-                                center={position}
-                                zoom={17}
-                            >
-                            <Marker position={position}/>
-                            </GoogleMap>
-                            ) : <></>}
-                        </Map>
                         
                     </ContactContentContainer>
                 </ContactContent>

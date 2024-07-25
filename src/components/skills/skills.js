@@ -24,8 +24,7 @@ const Skills = () => {
                             <h1>Tecnologias</h1> 
                             
                         </SinopseTitle>
-                        Sempre fui fascinado pela tecnologia e inovações que ela pode fazer trazendo melhorias e resolução de problemas, hoje em dia busco o desenvolvimento e crescimento profissional e tecnológico. 
-                        Venho sempre buscando aprender sobre novas tecnologias e me atualizar no mercado de trabalho. Foco no desenvolvimento web com as tecnologias HTML, CSS, JavaScript, TypeScript, React, Node.
+                        Buscando sempre me atualizar e aprender novas tecnologias recorrentes no mercado.
 
                     </ProfileSinopse>
                 </SkillsTxt>

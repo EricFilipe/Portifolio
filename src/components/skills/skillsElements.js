@@ -45,9 +45,9 @@ export const TecnologiesImgContainer = styled.div`
  grid-template-columns: repeat(4, 1fr);
  padding: 0 70px;
  box-sizing: border-box;
+ gap: 20px;
 
  @media (max-width: 768px) {
-    gap: 20px;
     grid-template-columns: repeat(3, 1fr);
  }
 `;
